@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinak</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+  </head>
+  <body>
+    <div class="max-w-screen-mx-auto bg-black">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">Pinak Saha</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href='home.html'>Home</a></li>
+            
+            <li><a >Item</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+         
+        </div>
+      </div>
+
+      <h1 class='text-xl text-center font-black'>Add From</h1>
+      <div class="card shrink-0 w-full max-w-sm mx-auto shadow-2xl bg-base-100">
+          <form class="card-body" onsubmit="event.preventDefault(); postData();">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Id</span>
+                </label>
+                <input type="number" id="id" placeholder="Id" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Name</span>
+                </label>
+                <input type="text" id="name" placeholder="Name" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Author</span>
+                </label>
+                <input type="text" id="author" placeholder="Author" class="input input-bordered" required />
+              </div>
+              <div class="dropdown dropdown-bottom" id="categoryDropdown">
+                  <div tabindex="0" role="button" class="btn m-1" onclick="toggleDropdown()">Select Category</div>
+                  <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li onclick="selectCategory('Movie')"><a>Movie</a></li>
+                    <li onclick="selectCategory('Books')"><a>Books</a></li>
+                    <li onclick="selectCategory('Magazine')"><a>Magazine</a></li>
+                  </ul>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Release Date</span>
+                </label>
+                <input type="text" id="releaseDate" placeholder="Release Date" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Photo</span>
+                </label>
+                <input type="file" id="image" class="file-input file-input-bordered file-input-info w-full max-w-xs" />
+              </div>
+            
+              <div class="form-control mt-6">
+                <button type="submit" class="btn btn-primary text-white">Add Now</button>
+              </div>
+          </form>
+      </div>
+      <!-- component -->
+      <table
+        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+      >
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th scope="col" class="px-6 py-3">Name</th>
+            <th scope="col" class="px-6 py-3">Author</th>
+            <th scope="col" class="px-6 py-3">Category</th>
+            <th scope="col" class="px-6 py-3">Release Date</th>
+            <th scope="col" class="px-6 py-3">Action</th>
+            <th scope="col" class="px-6 py-3">Action</th>
+          </tr>
+        </thead>
+        <tbody id="data-container">
+          <!-- Data will be dynamically inserted here -->
+        </tbody>
+      </table>  
+    <div id="update-form-container">
+      
+    </div>
+
+      <div class="container mt-4 mx-auto px-96">
+        <h2 class='text-white'>Product Search</h2>
+        <form id="searchForm">
+          <div class="form-group">
+            <input
+              type="text"
+              class="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none dark:bg-gray-800 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent"
+              id="searchTerm"
+              name="searchTerm"
+              placeholder="Enter search term"
+            />
+          </div>
+          <button type="submit" class="px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">Search</button>
+        </form>
+
+        <div id="searchResults" class="mt-4">
+          <!-- Search results will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script>
+      let selectedCategory = "Movie"; // Default category
+      let dropdownButton; // Declare the variable at a higher scope
+    
+      function toggleDropdown() {
+        const dropdownContent = document.querySelector('#categoryDropdown .dropdown-content');
+        if (dropdownContent) {
+          dropdownContent.classList.toggle('hidden');
+        }
+      }
+    
+      function selectCategory(category) {
+        selectedCategory = category;
+        dropdownButton = document.querySelector('#categoryDropdown .btn');
+        if (dropdownButton) {
+          dropdownButton.innerText = category;
+        }
+        toggleDropdown(); // Close the dropdown after selection
+      }
+    
+      function postData() {
+        const url = "http://127.0.0.1:8000/api/data/";
+    
+        const data = {
+          id: document.getElementById("id").value,
+          name: document.getElementById("name").value,
+          author: document.getElementById("author").value,
+          category: selectedCategory,
+          releaseDate: document.getElementById("releaseDate").value,
+          image: document.getElementById("image").files[0], // For file input
+        };
+    
+        const formData = new FormData();
+        formData.append("id", data.id);
+        formData.append("name", data.name);
+        formData.append("author", data.author);
+        formData.append("category", data.category);
+        formData.append("releaseDate", data.releaseDate);
+        formData.append("image", data.image);
+    
+        const options = {
+          method: "POST",
+          body: formData,
+        };
+    
+        fetch(url, options)
+          .then((response) => {
+            if (response.ok) {
+              console.log("Data posted successfully!");
+            } else {
+              console.error("Failed to post data. Status code:", response.status);
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
+    <script>
+      // Function to fetch data from the API and display it
+      async function fetchData() {
+        try {
+          const response = await fetch("http://127.0.0.1:8000/api/data/");
+          const data = await response.json();
+
+          const dataContainer = document.getElementById("data-container");
+          dataContainer.innerHTML = ""; // Clear previous data
+
+          data.forEach((item) => {
+            const itemDiv = document.createElement("div");
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                    <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        ${item.name}
+                    </td>
+                    <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        ${item.author}
+                    </td> 
+                    <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        ${item.category}
+                    </td> 
+                    <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        ${item.releaseDate}  
+                    </td> 
+                    <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <button onclick="openUpdateForm(${item.id})">Update</button> 
+                  </td>
+                    <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <button onclick="deleteItem(${item.id})">Delete</button> 
+                    </td>
+                    
+                     
+                       
+                    `;
+            dataContainer.appendChild(row);
+          });
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      }
+
+      function openUpdateForm(id) {
+        const formDiv = document.createElement("div");
+        formDiv.innerHTML = `
+                <div class="card shrink-0 w-full max-w-sm mx-auto shadow-2xl bg-base-100">
+                  <form id="updateForm">
+                      <div class="py-4 px-8">
+                          <div class="mb-4">
+                              <label class="block text-grey-darker text-sm font-bold mb-2">Name</label>
+                              <input class=" border rounded w-full py-2 px-3 text-grey-darker"  type="text" id="nameInput" placeholder="Name">
+                       
+                          </div>
+  
+  
+                          <div class="mb-4">
+                              <label class="block text-grey-darker text-sm font-bold mb-2">Author</label>
+                              <input class=" border rounded w-full py-2 px-3 text-grey-darker"  type="text" id="authorInput" placeholder="Author">
+                        
+                          </div>
+  
+                          <div class="mb-4">
+                            <label class="block text-grey-darker text-sm font-bold mb-2">Category</label>
+                            <select class="border rounded w-full py-2 px-3 text-grey-darker" id="categoryInput">
+                                <option value="Movie">Movie</option>
+                                <option value="Books">Books</option>
+                                <option value="Magazine">Magazine</option>
+                            </select>
+                        </div>
+  
+  
+                               <div class="mb-4">
+                              <label class="block text-grey-darker text-sm font-bold mb-2">Image</label>
+                              <input class=" border rounded w-full py-2 px-3 text-grey-darker"  type="file" id="imageInput">
+                          </div>
+                          <div class="mb-4">
+                            <label class="block text-grey-darker text-sm font-bold mb-2">Relise Date</label>
+                            <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text" id="releaseDateInput"placeholder="reliese">
+                        </div>
+                          <div class="mb-4">
+                              <button type="button" onclick="submitUpdate(${id})"
+                                  class="mb-2 mx-16 rounded-full py-1 px-24 bg-gradient-to-r from-green-400 to-blue-500 ">
+                                  Save
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+            `;
+
+        document.body.appendChild(formDiv);
+      }
+
+      async function submitUpdate(id) {
+        const name = document.getElementById("nameInput").value;
+        const author = document.getElementById("authorInput").value;
+        const releaseDate = document.getElementById("releaseDateInput").value;
+        const imageInput = document.getElementById("imageInput");
+        const imageFile = imageInput.files[0]; // Get the file object
+    
+        // Get the selected category value from the dropdown
+        const categorySelect = document.getElementById("categoryInput");
+        const category = categorySelect.options[categorySelect.selectedIndex].value;
+    
+        const data = new FormData();
+        data.append("id", id);
+        data.append("name", name);
+        data.append("author", author);
+        data.append("category", category);
+        data.append("releaseDate", releaseDate);
+        data.append("image", imageFile); // Append the file object
+    
+        try {
+            const response = await fetch(
+                `http://127.0.0.1:8000/api/data/${id}/`,
+                {
+                    method: "PUT",
+                    body: data, // Send the FormData object directly
+                }
+            );
+    
+            if (response.ok) {
+                // Update successful, refresh the data
+                fetchData();
+            } else {
+                console.error("Update failed:", response.statusText);
+            }
+        } catch (error) {
+            console.error("Error updating data:", error);
+        }
+    }
+    
+      async function deleteItem(id) {
+        try {
+          const response = await fetch(`http://127.0.0.1:8000/api/data/${id}`, {
+            method: "DELETE", // Use DELETE method for deletion
+          });
+
+          if (response.ok) {
+            console.log(`Item with ID ${id} deleted successfully`);
+            // You might want to reload data after deletion
+            fetchData();
+          } else {
+            console.error(`Failed to delete item with ID ${id}`);
+          }
+        } catch (error) {
+          console.error("Error deleting item:", error);
+        }
+      }
+      window.onload = fetchData;
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // Handle form submission
+      $("#searchForm").submit(function (event) {
+        event.preventDefault();
+        var searchTerm = $("#searchTerm").val().trim();
+
+        // Make GET request to the Django API
+        axios
+          .get("http://127.0.0.1:8000/api/data/search/", {
+            params: {
+              search: searchTerm,
+            },
+          })
+          .then(function (response) {
+            displaySearchResults(response.data);
+          })
+          .catch(function (error) {
+            console.error("Error fetching search results:", error);
+          });
+      });
+
+      // Display search results in the UI
+      function displaySearchResults(results) {
+        var searchResultsDiv = $("#searchResults");
+        searchResultsDiv.empty();
+
+        if (results.length === 0) {
+          searchResultsDiv.append("<p>No results found.</p>");
+        } else {
+          var resultList = $('<ul class="list-group"></ul>');
+          results.forEach(function (result) {
+            resultList.append(
+              '<li class="list-group-item text-white">' + result.name + "</li>"
+            );
+          });
+          searchResultsDiv.append(resultList);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinak</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+  </head>
+  <body class='max-w-screen-mx-auto bg-black'>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Item 1</a></li>
+            <li>
+              <a>Parent</a>
+              <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">Pinak Saha</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a >Home</a></li>
+          
+          <li><a href='index.html'>Item</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+       
+      </div>
+    </div>
+    <div
+        id="carouselExampleCaptions"
+        class="relative"
+        data-te-carousel-init
+        data-te-ride="carousel"
+      >
+        <!--Carousel indicators-->
+        <div
+          class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+          data-te-carousel-indicators
+        >
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="0"
+            data-te-carousel-active
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="1"
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="2"
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <!--Carousel items-->
+        <div
+          class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+        >
+          <!--First item-->
+          <div
+            class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-active
+            data-te-carousel-item
+            style="backface-visibility: hidden"
+          >
+            <img
+              src="https://i.postimg.cc/3NpDdxgV/391393.png"
+              class="block w-full h-3/4"
+              alt="..."
+            />
+            <div
+              class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block"
+            >
+              <h5 class="text-xl">First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <!--Second item-->
+          <div
+            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            style="backface-visibility: hidden"
+          >
+            <img
+              src="https://i.postimg.cc/HWQxcKqq/uk-music-magazines-on-display-in-a-newsagents-2-R8-N8-AJ.png"
+              class="block w-full"
+              alt="..."
+            />
+            <div
+              class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block"
+            >
+              <h5 class="text-xl">Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <!--Third item-->
+          <div
+            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            style="backface-visibility: hidden"
+          >
+            <img
+              src="https://i.postimg.cc/Gp83cSPS/wp5037974.png"
+              class="block w-full"
+              alt="..."
+            />
+            <div
+              class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block"
+            >
+              <h5 class="text-xl">Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Carousel controls - prev item-->
+        <button
+          class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+          type="button"
+          data-te-target="#carouselExampleCaptions"
+          data-te-slide="prev"
+        >
+          <span class="inline-block h-8 w-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </span>
+          <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Previous</span
+          >
+        </button>
+        <!--Carousel controls - next item-->
+        <button
+          class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+          type="button"
+          data-te-target="#carouselExampleCaptions"
+          data-te-slide="next"
+        >
+          <span class="inline-block h-8 w-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </span>
+          <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Next</span
+          >
+        </button>
+    </div>
+    <section class="mb-40">
+      <div
+        class="relative overflow-hidden bg-cover bg-no-repeat"
+        style="
+          background-position: 50%;
+          background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/146.webp');
+          height: 500px;
+        "
+      >
+        <div
+          class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed"
+        >
+          <div class="flex h-full items-center justify-center">
+            <div class="px-6 text-center text-white md:px-12">
+              <h1
+                class="mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl"
+              >
+                Well Come To<br /><span>Pinak Blog</span>
+              </h1>
+              <button
+                type="button"
+                class="rounded border-2 border-neutral-50 px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
+                Get started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jumbotron -->
+    </section>
+
+    <section class="dark:bg-black">
+      <div role="tablist" class="tabs tabs-bordered w-60 mx-auto">
+        <a role="tab" class="tab tab-active" onclick="filterItems('All')">All</a>
+        <a role="tab" class="tab tab-active" onclick="filterItems('Movie')">Movie</a>
+        <a role="tab" class="tab tab-active" onclick="filterItems('Books')">Books</a>
+        <a role="tab" class="tab tab-active" onclick="filterItems('Magazine')">Magazine</a>
+      </div>
+      <div  class="flex flex-col justify-center p-4 mx-auto">
+        <div id="data-container" class="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
+          <div >   
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-black py-12 text-white sm:py-16 lg:py-20">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-md text-center">
+          <h2 class="font-serif text-2xl font-bold sm:text-3xl">
+            Our featured Aroma Range
+          </h2>
+          <p class="mt-4 text-base text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
+            faucibus massa dignissim tempus.
+          </p>
+        </div>
+
+        <div
+          class="mt-10 grid grid-cols-2 gap-6 lg:mt-16 lg:grid-cols-4 lg:gap-4 bg-black text-white"
+        >
+          <article class="relative">
+            <div class="aspect-square overflow-hidden">
+              <img
+                class="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
+                src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347941211i/177106.jpg"
+                alt=""
+              />
+            </div>
+            <div class="absolute top-0 m-1 rounded-full bg-white">
+              <p
+                class="text-[10px] rounded-full bg-black p-1 font-bold uppercase tracking-wide text-white sm:px-3 sm:py-1"
+              >
+                Sale
+              </p>
+            </div>
+            <div class="mt-4 flex items-start justify-between">
+              <div class="">
+                <h3 class="text-xs font-semibold sm:text-sm md:text-base">
+                  <a href="#" title="" class="cursor-pointer">
+                    Arabian Musk
+                    <span class="absolute" aria-hidden="true"></span>
+                  </a>
+                </h3>
+                <div class="mt-2 flex items-center">
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="text-right">
+                <del
+                  class="mt-px text-xs font-semibold text-gray-600 sm:text-sm"
+                >
+                  $79.00
+                </del>
+                <p class="text-xs font-normal sm:text-sm md:text-base">
+                  $99.00
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="relative">
+            <div class="aspect-square overflow-hidden">
+              <img
+                class="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
+                src="https://assets.gadgets360cdn.com/pricee/assets/product/202212/65_1671448856.jpg"
+                alt=""
+              />
+            </div>
+            <div class="mt-4 flex items-start justify-between">
+              <div class="">
+                <h3 class="text-xs font-semibold sm:text-sm md:text-base">
+                  <a href="#" title="" class="cursor-pointer">
+                    Albanian Essence
+                    <span class="absolute" aria-hidden="true"></span>
+                  </a>
+                </h3>
+                <div class="mt-2 flex items-center">
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="text-right">
+                <p class="text-xs font-normal sm:text-sm md:text-white">
+                  $299.00
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="relative">
+            <div class="aspect-square overflow-hidden">
+              <img
+                class="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
+                src="https://marketbusinessnews.com/wp-content/uploads/2019/04/AARP-The-Magazine.jpg"
+                alt=""
+              />
+            </div>
+            <div class="mt-4 flex items-start justify-between">
+              <div class="">
+                <h3 class="text-xs font-semibold sm:text-sm md:text-base">
+                  <a href="#" title="" class="cursor-pointer">
+                    Siberian Perfum
+                    <span class="absolute" aria-hidden="true"></span>
+                  </a>
+                </h3>
+                <div class="mt-2 flex items-center">
+                  <svg
+                    class="block h-3 w-3 align-middle text-black sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="text-right">
+                <p class="text-xs font-normal sm:text-sm md:text-white">
+                  $49.00
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="relative">
+            <div class="aspect-square overflow-hidden">
+              <img
+                class="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
+                src="https://cdn.moviefone.com/admin-uploads/posters/aquaman-movie-poster_1699896508.jpg?d=360x540&q=60"
+                alt=""
+              />
+            </div>
+            <div class="mt-4 flex items-start justify-between">
+              <div class="">
+                <h3 class="text-xs font-semibold sm:text-sm md:text-base">
+                  <a href="#" title="" class="cursor-pointer">
+                    Danish Levoune
+                    <span class="absolute" aria-hidden="true"></span>
+                  </a>
+                </h3>
+                <div class="mt-2 flex items-center">
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+
+                  <svg
+                    class="block h-3 w-3 align-middle text-white sm:h-4 sm:w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      class=""
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="text-right">
+                <p class="text-xs font-normal sm:text-sm md:text-white">
+                  $79.00
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="flex flex-col items-center bg-black text-center text-white dark:bg-neutral-600 dark:text-neutral-200"
+    >
+      <div class="container p-6">
+        <div class="grid gap-4 md:grid-cols-3 lg:grid-cols-6">
+          <div class="mb-6 lg:mb-0">
+            <img
+              src="https://tecdn.b-cdn.net/img/new/fluid/city/113.webp"
+              class="w-full rounded-md shadow-lg"
+            />
+          </div>
+          <div class="mb-6 lg:mb-0">
+            <img
+              src="https://tecdn.b-cdn.net/img/new/fluid/city/111.webp"
+              class="w-full rounded-md shadow-lg"
+            />
+          </div>
+          <div class="mb-6 lg:mb-0">
+            <img
+              src="https://tecdn.b-cdn.net/img/new/fluid/city/112.webp"
+              class="w-full rounded-md shadow-lg"
+            />
+          </div>
+          <div class="mb-6 lg:mb-0">
+            <img
+              src="https://tecdn.b-cdn.net/img/new/fluid/city/114.webp"
+              class="w-full rounded-md shadow-lg"
+            />
+          </div>
+          <div class="mb-6 lg:mb-0">
+            <img
+              src="https://tecdn.b-cdn.net/img/new/fluid/city/115.webp"
+              class="w-full rounded-md shadow-lg"
+            />
+          </div>
+          <div class="mb-6 lg:mb-0">
+            <img
+              src="https://tecdn.b-cdn.net/img/new/fluid/city/116.webp"
+              class="w-full rounded-md shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--Copyright section-->
+      <div
+        class="w-full bg-neutral-300 p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200"
+      >
+        © 2024 Copyright:
+        <a class="dark:text-neutral-400" href="https://tw-elements.com/"
+          >Pinak Saha</a
+        >
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script>
+      let allItemsData; // Store all items data globally
+    
+      async function fetchData() {
+        try {
+          const response = await fetch("http://127.0.0.1:8000/api/data/");
+          allItemsData = await response.json();
+    
+          renderItems(allItemsData);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      }
+    
+      function renderItems(data) {
+        const dataContainer = document.getElementById("data-container");
+        dataContainer.innerHTML = ""; // Clear previous data
+    
+        data.forEach((item) => {
+          const imageUrl = "http://127.0.0.1:8000" + item.image;
+          console.log("Image URL:", imageUrl);
+    
+          const itemDiv = document.createElement("div");
+          itemDiv.innerHTML = `
+          <div class="relative group w-96 h-96 overflow-hidden bg-black m-auto mt-36">
+            <img class="object-cover w-full h-full transform duration-700 backdrop-opacity-100" src="${imageUrl}" />
+            <div class="absolute w-full h-full shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0"></div>
+            <div class="absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4 group-hover:-inset-y-0">
+                <div class="absolute w-full flex place-content-center">
+                    <p class="capitalize font-serif font-bold text-3xl text-center shadow-2xl text-white mt-10">
+                        ${item.name}
+                    </p>
+                </div>
+                <div class="absolute w-full flex place-content-center mt-20"></div>
+                <button class="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48"></button>
+            </div>
+        </div>
+                    `;
+          dataContainer.appendChild(itemDiv);
+        });
+      }
+    
+      function filterItems(category) {
+        if (category === "All") {
+          renderItems(allItemsData); // Show all items
+        } else {
+          const filteredData = allItemsData.filter(item => item.category === category);
+          renderItems(filteredData);
+        }
+      }
+    
+      fetchData();
+    </script>
+  </body>
+</html>
